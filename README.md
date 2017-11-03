@@ -1,5 +1,5 @@
 
-# DC/OS Kafka Scraper
+# DC/OS Systemd Health Scraper
 
 This scraper does a specific thing, that this is.
 
