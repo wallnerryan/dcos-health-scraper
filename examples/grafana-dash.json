@@ -6,7 +6,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "hideControls": false,
-  "id": 6,
+  "id": 10,
   "links": [],
   "refresh": false,
   "rows": [
@@ -504,11 +504,92 @@
           "colorBackground": true,
           "colorValue": false,
           "colors": [
+            "rgba(245, 4, 4, 0.9)",
+            "rgba(140, 231, 21, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 3,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "desc",
+          "targets": [
+            {
+              "expr": "100 - (sum(avg_over_time(dcos_docker_gc_service[1y])) by (job))",
+              "format": "time_series",
+              "hide": false,
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Uptime (Docker Garbage Collection)",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(177, 233, 27, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "default",
+          "datasource": null,
           "decimals": 5,
           "format": "none",
           "gauge": {
@@ -557,20 +638,17 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - (sum(avg_over_time(dcos_docker_gc_service[1y])) by (job)) ",
+              "expr": "100 - (sum(avg_over_time(dcos_mesos_master_service[1y])) by (job))",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
           "timeFrom": null,
           "timeShift": null,
-          "title": "(DC/OS Docker GC) 1 Year Uptime",
+          "title": "(DC/OS Masters) 1 Year Uptime",
           "type": "singlestat",
           "valueFontSize": "100%",
           "valueMaps": [
@@ -640,14 +718,11 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - avg_over_time(dcos_marathon_service[1y])",
+              "expr": "100 - (sum(avg_over_time(dcos_marathon_service[1y])) by (job))",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
@@ -723,14 +798,11 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - avg_over_time(dcos_navstar_service[1y])",
+              "expr": "100 - (sum(avg_over_time(dcos_navstar_service[1y])) by (job))",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
@@ -806,14 +878,11 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - avg_over_time(dcos_mesos_dns_service[1y])",
+              "expr": "100 - (sum(avg_over_time(dcos_mesos_dns_service[1y])) by (job))",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
@@ -889,14 +958,11 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - avg_over_time(dcos_exhibitor_service[1y])",
+              "expr": "100 - (sum(avg_over_time(dcos_exhibitor_service[1y])) by (job))",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
@@ -972,14 +1038,11 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - avg_over_time(dcos_metronome_service[1y])",
+              "expr": "100 - (sum(avg_over_time(dcos_metronome_service[1y])) by (job)) ",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
@@ -1055,103 +1118,17 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "100 - avg_over_time(dcos_mesos_slave_service[1y])",
+              "expr": "100 - (sum(avg_over_time(dcos_mesos_slave_service[1y])) by (job))",
               "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 3600
             }
           ],
           "thresholds": "70,99.9999",
           "timeFrom": null,
           "timeShift": null,
           "title": "(Mesos Agents) 1 Year Uptime",
-          "type": "singlestat",
-          "valueFontSize": "100%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": true,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(177, 233, 27, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "default",
-          "decimals": 5,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "hideTimeOverride": false,
-          "id": 12,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "Uptime %",
-          "prefixFontSize": "100%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 3,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "100 - avg_over_time(dcos_mesos_master_service[1y])",
-              "format": "time_series",
-              "hide": false,
-              "interval": "30m",
-              "intervalFactor": 4,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 7200
-            }
-          ],
-          "thresholds": "70,99.9999",
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "(DC/OS Masters) 1 Year Uptime",
           "type": "singlestat",
           "valueFontSize": "100%",
           "valueMaps": [
@@ -1220,5 +1197,5 @@
   },
   "timezone": "",
   "title": "DC/OS Systemd Agent Health",
-  "version": 2
+  "version": 24
 }
