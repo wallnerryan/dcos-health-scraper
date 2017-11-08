@@ -1,0 +1,1224 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": 6,
+  "links": [],
+  "refresh": false,
+  "rows": [
+    {
+      "collapse": false,
+      "height": 243,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "default",
+          "fill": 0,
+          "id": 11,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 1,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_master_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_adminrouter_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "B",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_cosmos_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_docker_gc_service[1y])",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "refId": "D",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_exhibitor_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "E",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_navstar_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "F",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_dns_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "G",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_metronome_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "H",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_spartan_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "I",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_marathon_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "J",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_secrets_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "K",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_networking_api_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "L",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_slave_public_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "M",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_dcos_mesos_slave_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "N",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_3dt_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "O",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_bouncer_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "P",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_cosmos_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "Q",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_epmd_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "R",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_gen_resolvconf_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "S",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_history_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "T",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_vault_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "U",
+              "step": 240
+            },
+            {
+              "expr": "100 - avg_over_time(dcos_signal_service[1y])",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "V",
+              "step": 240
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "% Uptime: DC/OS System Components",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "decimals": 4,
+              "format": "short",
+              "label": "% Uptime",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "default",
+          "fill": 1,
+          "id": 1,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": true,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "dcos_mesos_master_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 240
+            },
+            {
+              "expr": "dcos_adminrouter_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "B",
+              "step": 240
+            },
+            {
+              "expr": "dcos_cosmos_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "C",
+              "step": 240
+            },
+            {
+              "expr": "dcos_docker_gc_service",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "refId": "D",
+              "step": 240
+            },
+            {
+              "expr": "dcos_exhibitor_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "E",
+              "step": 240
+            },
+            {
+              "expr": "dcos_navstar_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "F",
+              "step": 240
+            },
+            {
+              "expr": "dcos_mesos_dns_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "G",
+              "step": 240
+            },
+            {
+              "expr": "dcos_metronome_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "H",
+              "step": 240
+            },
+            {
+              "expr": "dcos_spartan_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "I",
+              "step": 240
+            },
+            {
+              "expr": "dcos_marathon_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "J",
+              "step": 240
+            },
+            {
+              "expr": "dcos_secrets_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "K",
+              "step": 240
+            },
+            {
+              "expr": "dcos_networking_api_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "L",
+              "step": 240
+            },
+            {
+              "expr": "dcos_mesos_slave_public_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "M",
+              "step": 240
+            },
+            {
+              "expr": "dcos_mesos-dcos_mesos_slave_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "N",
+              "step": 240
+            },
+            {
+              "expr": "dcos_3dt_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "O",
+              "step": 240
+            },
+            {
+              "expr": "dcos_bouncer_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "P",
+              "step": 240
+            },
+            {
+              "expr": "dcos_cosmos_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "Q",
+              "step": 240
+            },
+            {
+              "expr": "dcos_epmd_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "R",
+              "step": 240
+            },
+            {
+              "expr": "dcos_gen_resolvconf_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "S",
+              "step": 240
+            },
+            {
+              "expr": "dcos_history_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "T",
+              "step": 240
+            },
+            {
+              "expr": "dcos_vault_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "U",
+              "step": 240
+            },
+            {
+              "expr": "dcos_signal_service",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "V",
+              "step": 240
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "DC/OS Systemd Agent Health",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 183,
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(177, 233, 27, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 4,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - (sum(avg_over_time(dcos_docker_gc_service[1y])) by (job)) ",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(DC/OS Docker GC) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(161, 231, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 5,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_marathon_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(Marathon) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(161, 231, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_navstar_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(Navstar) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(161, 231, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 7,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_dns_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(Mesos DNS) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(161, 231, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 8,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_exhibitor_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(Zookeeper) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(161, 231, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 9,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_metronome_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(Jobs - Metronome) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(161, 231, 30, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 10,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_slave_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(Mesos Agents) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(177, 233, 27, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "default",
+          "decimals": 5,
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "hideTimeOverride": false,
+          "id": 12,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "Uptime %",
+          "prefixFontSize": "100%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "100 - avg_over_time(dcos_mesos_master_service[1y])",
+              "format": "time_series",
+              "hide": false,
+              "interval": "30m",
+              "intervalFactor": 4,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 7200
+            }
+          ],
+          "thresholds": "70,99.9999",
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "(DC/OS Masters) 1 Year Uptime",
+          "type": "singlestat",
+          "valueFontSize": "100%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": -606,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    }
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-2d",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "DC/OS Systemd Agent Health",
+  "version": 2
+}

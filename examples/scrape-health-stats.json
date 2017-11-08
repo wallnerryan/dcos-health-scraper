@@ -20,7 +20,6 @@
       "portMappings": [
         {
           "containerPort": 18294,
-          "hostPort": 18294,
           "protocol": "tcp",
           "name": "metrics"
         }
@@ -39,7 +38,7 @@
   },
   "secrets": {
     "secret0": {
-      "source": "logging/svcuserpassword"
+      "source": "logging/svcuserpass"
     }
   },
   "unreachableStrategy": {
@@ -52,7 +51,7 @@
     "HEALTH_SVC_P": {
       "secret": "secret0"
     },
-    "DCOS_URL": "https://ui.dcos.dev.bed.athenahealth.com",
-    "HEALTH_SVC_U": "pvtc_logging_user"
+    "DCOS_URL": "https://master.mesos",
+    "HEALTH_SVC_U": "svc_logging_user"
   }
 }
